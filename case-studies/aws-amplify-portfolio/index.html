@@ -1,0 +1,349 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AWS Amplify Hosting portfolio deployment case study by Emmanuel Amoh.">
+  <title>AWS Amplify Portfolio Deployment | Emmanuel Amoh</title>
+
+  <style>
+    :root {
+      --bg: #080e18;
+      --panel: #101c2c;
+      --panel-light: #14243a;
+      --blue: #2995ff;
+      --text: #e8eef8;
+      --muted: #9aabc2;
+      --border: #263a52;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+
+    a { color: var(--blue); text-decoration: none; }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 20px 0;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand { color: white; font-weight: 700; letter-spacing: 1px; }
+    .back { font-size: 14px; }
+
+    .hero { padding: 85px 0 55px; }
+
+    .eyebrow {
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 850px;
+      font-size: clamp(36px, 6vw, 62px);
+      line-height: 1.1;
+      margin: 20px 0;
+    }
+
+    h2 { font-size: 27px; margin-top: 0; }
+    h3 { font-size: 18px; }
+
+    .intro {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .status {
+      display: inline-block;
+      padding: 7px 12px;
+      border: 1px solid #236c50;
+      color: #7be0ad;
+      border-radius: 4px;
+      font-size: 12px;
+      margin-top: 15px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin: 35px 0;
+    }
+
+    .stat, .panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      padding: 24px;
+      border-radius: 5px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 19px;
+      color: white;
+    }
+
+    .stat span, .muted { color: var(--muted); font-size: 14px; }
+
+    section { padding: 35px 0; }
+
+    .architecture {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      padding: 30px;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    .architecture .node {
+      display: inline-block;
+      background: var(--panel-light);
+      border: 1px solid var(--blue);
+      padding: 15px 22px;
+      margin: 8px;
+      border-radius: 4px;
+      min-width: 190px;
+    }
+
+    .arrow { color: var(--blue); font-size: 22px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    ul { padding-left: 22px; color: var(--muted); }
+    li { margin-bottom: 9px; }
+
+    .button {
+      display: inline-block;
+      padding: 12px 19px;
+      background: var(--blue);
+      color: white;
+      border-radius: 4px;
+      font-weight: bold;
+      margin: 8px 8px 0 0;
+    }
+
+    .button.secondary {
+      background: transparent;
+      border: 1px solid var(--border);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 30px 0;
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 700px) {
+      .stats, .grid { grid-template-columns: 1fr; }
+      .hero { padding-top: 55px; }
+      .architecture .node { width: 100%; margin: 5px 0; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="../../index.html">EMMANUEL AMOH</a>
+    <a class="back" href="../../projects.html">← Back to Projects</a>
+  </div>
+</header>
+
+<main class="container">
+
+  <div class="hero">
+    <p class="eyebrow">AWS CLOUD PROJECT · CASE STUDY 01</p>
+
+    <h1>Deploying a Personal Technology Portfolio with AWS Amplify</h1>
+
+    <p class="intro">
+      A practical cloud deployment project demonstrating how a static
+      website can be hosted on AWS, connected to GitHub, and deployed
+      through an automated build and deployment workflow.
+    </p>
+
+    <span class="status">Deployment successful</span>
+
+    <div class="stats">
+      <div class="stat">
+        <strong>AWS Amplify</strong>
+        <span>Hosting platform</span>
+      </div>
+      <div class="stat">
+        <strong>GitHub</strong>
+        <span>Source code repository</span>
+      </div>
+      <div class="stat">
+        <strong>Europe (Ireland)</strong>
+        <span>AWS deployment region</span>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <p class="eyebrow">01 / PROJECT OVERVIEW</p>
+    <h2>Project background</h2>
+
+    <p class="muted">
+      I wanted to establish a professional online presence where I could
+      demonstrate my IT support, infrastructure, networking, cloud
+      computing and cybersecurity knowledge.
+    </p>
+
+    <p class="muted">
+      Instead of stopping at a locally developed website, I took the
+      project further by deploying it to AWS Amplify Hosting and
+      connecting it to a GitHub repository.
+    </p>
+  </section>
+
+  <section>
+    <p class="eyebrow">02 / ARCHITECTURE</p>
+    <h2>How the deployment works</h2>
+
+    <div class="architecture">
+      <div class="node">Developer<br><small>Website updates</small></div>
+      <div class="arrow">↓</div>
+      <div class="node">GitHub Repository<br><small>Source code · Main branch</small></div>
+      <div class="arrow">↓</div>
+      <div class="node">AWS Amplify Hosting<br><small>Build and deployment</small></div>
+      <div class="arrow">↓</div>
+      <div class="node">Live Website<br><small>HTTPS · Public access</small></div>
+    </div>
+
+    <p class="muted">
+      Workflow: changes are committed to GitHub. Amplify monitors the
+      connected branch and automatically starts a deployment when
+      new commits are pushed.
+    </p>
+  </section>
+
+  <section>
+    <p class="eyebrow">03 / TECHNOLOGY STACK</p>
+    <h2>Tools and services used</h2>
+
+    <div class="grid">
+      <div class="panel">
+        <h3>AWS Amplify Hosting</h3>
+        <p class="muted">Hosts and delivers the portfolio website.</p>
+      </div>
+
+      <div class="panel">
+        <h3>GitHub</h3>
+        <p class="muted">Stores the website source code and tracks changes.</p>
+      </div>
+
+      <div class="panel">
+        <h3>HTML and CSS</h3>
+        <p class="muted">Build the website structure and visual presentation.</p>
+      </div>
+
+      <div class="panel">
+        <h3>Visual Studio Code</h3>
+        <p class="muted">Used for editing and maintaining the website.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <p class="eyebrow">04 / IMPLEMENTATION</p>
+    <h2>What I implemented</h2>
+
+    <ul>
+      <li>Created a multi-page personal technology portfolio.</li>
+      <li>Created a GitHub repository for source-code management.</li>
+      <li>Connected the GitHub repository to AWS Amplify.</li>
+      <li>Configured the main branch for deployment.</li>
+      <li>Deployed the website using the Amplify hosting workflow.</li>
+      <li>Verified that the generated public website URL loads successfully.</li>
+    </ul>
+  </section>
+
+  <section>
+    <p class="eyebrow">05 / SECURITY AND OPERATIONS</p>
+    <h2>Security considerations</h2>
+
+    <ul>
+      <li>Keep AWS account credentials and access keys out of GitHub.</li>
+      <li>Enable multi-factor authentication on the AWS account.</li>
+      <li>Use HTTPS for public website access.</li>
+      <li>Review AWS account permissions and billing regularly.</li>
+      <li>Monitor deployment status and investigate failed builds.</li>
+    </ul>
+  </section>
+
+  <section>
+    <p class="eyebrow">06 / LEARNING OUTCOMES</p>
+    <h2>What this project demonstrates</h2>
+
+    <p class="muted">
+      This project gave me practical exposure to cloud-based website
+      hosting, source-code management, Git integration, automated
+      deployments and the operational considerations involved in
+      publishing a public-facing application.
+    </p>
+
+    <p class="muted">
+      Future improvements include custom domain configuration,
+      additional monitoring, performance optimisation and stronger
+      deployment security controls.
+    </p>
+  </section>
+
+  <section>
+    <p class="eyebrow">07 / PROJECT LINKS</p>
+    <h2>Explore the implementation</h2>
+
+    <a class="button"
+       href="https://main.d1x6570ize4wdb.amplifyapp.com/"
+       target="_blank" rel="noopener">
+      View Live Portfolio ↗
+    </a>
+
+    <a class="button secondary"
+       href="https://github.com/techkwamehelp/emmanuel-amoh-technology-portfolio"
+       target="_blank" rel="noopener">
+      View GitHub Repository ↗
+    </a>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    © 2026 Emmanuel Amoh · AWS Cloud Portfolio Project
+  </div>
+</footer>
+
+</body>
+</html>
